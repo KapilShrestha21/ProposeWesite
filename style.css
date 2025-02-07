@@ -1,0 +1,132 @@
+body {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.gif {
+    height: 230px;
+    width: 230px;
+    border-radius: 40px;
+}
+
+.yes {
+    border: 20px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    color: rgb(122, 59, 98);
+}
+
+.no {
+    border: 20px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 3px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    color: rgb(122, 59, 98);
+}
+
+.yes:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    color: rgb(85, 36, 66);
+}
+.no:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    color: rgb(85, 36, 66);
+}
+
+.btn {
+    margin-right: 60px;
+}
+
+.text {
+    color: rgb(122, 59, 98);
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile devices (portrait, smaller screens) */
+@media only screen and (max-width: 600px) {
+    .gif {
+        height: 150px;
+        width: 150px;
+    }
+
+    .yes, .no {
+        font-size: 12px; /* Smaller button text for mobile */
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .btn {
+        margin-right: 30px; /* Reduce margin for smaller screens */
+    }
+
+    /* Center the text properly for mobile */
+    .text {
+        font-size: 18px; /* Slightly smaller text for mobile */
+    }
+}
+
+/* Tablets (portrait) */
+@media only screen and (max-width: 768px) {
+    .gif {
+        height: 180px;
+        width: 180px;
+    }
+
+    .yes, .no {
+        font-size: 14px; /* Slightly smaller button text for tablet */
+        padding: 9px 18px; /* Adjust padding for tablets */
+    }
+
+    .btn {
+        margin-right: 40px; /* Adjust margin for tablet screens */
+    }
+
+    .text {
+        font-size: 20px; /* Adjust text size for tablet */
+    }
+}
+
+/* Desktops and larger screens */
+@media only screen and (min-width: 1024px) {
+    .gif {
+        height: 230px;
+        width: 230px;
+    }
+
+    .yes, .no {
+        font-size: 15px; /* Larger font size for desktop */
+        padding: 10px 20px;
+    }
+
+    .btn {
+        margin-right: 60px; /* Larger margin for desktop */
+    }
+
+    .text {
+        font-size: 22px; /* Adjust text size for desktop */
+    }
+}

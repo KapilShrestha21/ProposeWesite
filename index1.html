@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <img class="gif" src="love-gif.gif" alt="">
+    <h1 class="displayText text"></h1>
+    <div class="btn">
+        <button onclick="redirectToPage2()" class="yes">Yes</button>
+        <button onclick="redirectToPage()" class="no">No</button>
+    </div>
+</body>
+<script>
+    const storedData = localStorage.getItem('inputData');
+    const h1Element = document.querySelector('.displayText');
+    
+    if(storedData){
+        h1Element.textContent = `Do you love me, ${storedData}?`;
+    }
+    function redirectToPage() {
+        window.location.href = 'index2.html'
+    }
+    function redirectToPage2() {
+        window.location.href = 'index4.html'
+    }
+</script>
+
+</html>

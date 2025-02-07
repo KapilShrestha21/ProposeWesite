@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <img class="gif" src="love-gif-3.gif" alt="">
+    <h1 class="text">Pleaseeeeeeeeeee!!!</h1>
+    <div class="btn">
+        <button onclick="redirectToPage()" class="yes">Yes</button>
+        <button id="randomButton" onclick="moveButton()" class="no">No</button>
+    </div>
+</body>
+<script>
+    const button = document.getElementById('randomButton');
+
+    function moveButton() {
+        const maxX = window.innerWidth - button.offsetWidth;
+        const maxY = window.innerHeight - button.offsetHeight;
+
+        // Get random position within the screen dimensions
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        // Set the new random position
+        button.style.left = `${randomX}px`;
+        button.style.top = `${randomY}px`;
+
+    }
+    function redirectToPage() {
+        // Set a flag in localStorage to trigger confetti effect on index4
+        localStorage.setItem('triggerConfetti', 'true');
+
+        // Redirect to index4
+        window.location.href = 'index4.html';
+    }
+</script>
+
+</html>

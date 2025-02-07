@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img class="gif" src="love-gif-7.gif" alt="">
+    <h1 class="text">I knew it, Hurrahhhh!!!</h1>
+</body>
+<script>
+    // Check if the page is redirected from index3
+    if (localStorage.getItem('triggerConfetti') === 'true') {
+            // Trigger confetti effect when arriving at index4
+            triggerConfetti();
+            // Clear the flag after triggering confetti
+            localStorage.removeItem('triggerConfetti');
+        }
+
+        function triggerConfetti() {
+            // Use the confetti library to trigger confetti
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+</script>
+
+</html>
